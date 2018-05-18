@@ -37,6 +37,13 @@ type ResponseBody struct {
 	Picture       string `json:"picture"`
 	Email         string `json:"email"`
 	EmailVerified bool   `json:"email_verified"`
+	Address       struct {
+		Country    string `json:"country"`
+		PostalCode string `json:"postal_code"`
+		Region     string `json:"region"`
+		Locality   string `json:"locality"`
+		Formatted  string `json:"formatted"`
+	} `json:"address"`
 }
 
 func NewClient(httpClient *http.Client) *Client {

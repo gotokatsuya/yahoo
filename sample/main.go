@@ -21,7 +21,7 @@ var (
 			TokenURL: "https://auth.login.yahoo.co.jp/yconnect/v2/token",
 		},
 		RedirectURL: os.Getenv("YCONNECT_CALLBACK_URL"),
-		Scopes:      []string{"openid", "profile", "email"},
+		Scopes:      []string{"openid", "profile", "email", "address"},
 	}
 
 	oauthStateString = "thisshouldberandom"
